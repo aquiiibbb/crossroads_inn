@@ -1,0 +1,361 @@
+:root {
+  --blue-deep: #042C53;
+  --blue-mid: #185FA5;
+  --blue-soft: #378ADD;
+  --blue-light: #B5D4F4;
+  --blue-pale: #E6F1FB;
+  --black: #0d0d0d;
+  --white: #ffffff;
+  --off-white: #f5f8fc;
+  --gray-line: rgba(24, 95, 165, 0.15);
+}
+
+/* ── Page wrapper ── */
+.feedback-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: 'DM Sans', 'Segoe UI', Tahoma, sans-serif;
+  background: var(--off-white);
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(55, 138, 221, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(4, 44, 83, 0.06) 0%, transparent 50%);
+}
+
+/* ── Card ── */
+.feedback-card {
+  background: var(--white);
+  border-radius: 28px;
+  max-width: 420px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--gray-line);
+  box-shadow: 0 2px 40px rgba(4, 44, 83, 0.08);
+}
+
+/* ── Card Top (Header) ── */
+.feedback-header {
+  background: #1F3A8A;
+  padding: 25px 32px 2px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.logo-container {
+  width: 200px;
+  height: 90px;
+  border-radius: 20px;
+  background: var(--white);
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.business-name {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  margin: 0 0 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.business-address {
+  font-size: 12px;
+  color: var(--blue-light);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Card Body ── */
+.feedback-content {
+  padding: 32px 28px 0;
+}
+
+.question-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--blue-deep);
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+/* ── Rating Buttons ── */
+.feedback-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 44px 0;
+}
+
+
+.feedback-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 16px;
+  border-radius: 20px;
+}
+
+.feedback-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.feedback-btn:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+.feedback-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feedback-btn.selected {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.feedback-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feedback-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-btn:hover .feedback-icon::before {
+  opacity: 0.2;
+}
+
+.positive-feedback {
+  border-color: #27ae60;
+  background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(46, 204, 113, 0.15));
+  box-shadow: 0 8px 32px rgba(39, 174, 96, 0.2);
+}
+
+.negative-feedback {
+  border-color: #e74c3c;
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(192, 57, 43, 0.15));
+  box-shadow: 0 8px 32px rgba(231, 76, 60, 0.2);
+}
+
+.emoji-icon {
+  font-size: 36px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.feedback-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description-text {
+  font-size: 16px;
+  margin: 24px 0 85px;
+  color: var(--blue-mid);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ── Card Footer ── */
+.card-footer1 {
+  background: #1F3A8A;
+  padding: 10px 0px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: -22px -28px 0px -28px;
+  /* Extends to card edges */
+}
+
+
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 8px 0;
+  color: var(--white);
+  font-size: 13px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.footer-hotel-tagline1 {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: white;
+}
+
+/* ── Loader ── */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 999;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--blue-pale);
+  border-top: 4px solid var(--blue-soft);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-screen p {
+  color: var(--blue-mid);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ── Mobile Responsiveness ── */
+@media (max-width: 768px) {
+  .feedback-header {
+    padding: 28px 24px 22px;
+  }
+
+  .card-footer {
+    padding: 32px 24px;
+    margin: 0 -20px -20px -20px;
+    /* Adjusts for mobile padding */
+  }
+
+
+  .feedback-content {
+    padding: 24px 20px 0;
+  }
+
+  .feedback-options {
+    gap: 30px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+    margin: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-page {
+    padding: 16px;
+  }
+
+  .feedback-card {
+    border-radius: 22px;
+  }
+
+  .feedback-options {
+    gap: 24px;
+    margin: 24px 0;
+  }
+
+  .feedback-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .emoji-icon {
+    font-size: 30px;
+  }
+
+  .feedback-text {
+    font-size: 12px;
+  }
+
+  .description-text {
+    font-size: 14px;
+    margin: 20px 0 28px;
+  }
+
+  .card-footer {
+    padding: 44px 20px;
+    margin: 0 -4px -3px -4px;
+  }
+
+  .contact-item {
+    font-size: 11px;
+    margin: 6px 0;
+  }
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-link:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-link:active {
+  color: var(--blue-soft);
+}
