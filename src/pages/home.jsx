@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './home.css';
-import qrCodeImage from '../assest/qr-code.png';
+import qrCodeImage from '../assest/qr-code (1).png';
 import hotelLogo from '../assest/logo.jpg';
 
 export default function ReviewHomePage() {
